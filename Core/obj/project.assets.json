@@ -307,19 +307,6 @@
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
-      },
-      "Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "3.1.11"
-        },
-        "compile": {
-          "bin/placeholder/Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Core.dll": {}
-        }
       }
     }
   },
@@ -1042,16 +1029,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "Core/1.0.0": {
-      "type": "project",
-      "path": "../Core/Core.csproj",
-      "msbuildProject": "../Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Core >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 3.1.11",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -1063,11 +1045,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AHC\\source\\repos\\RecapProject\\Entities\\Entities.csproj",
-      "projectName": "Entities",
-      "projectPath": "C:\\Users\\AHC\\source\\repos\\RecapProject\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\AHC\\source\\repos\\RecapProject\\Core\\Core.csproj",
+      "projectName": "Core",
+      "projectPath": "C:\\Users\\AHC\\source\\repos\\RecapProject\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\AHC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AHC\\source\\repos\\RecapProject\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\AHC\\source\\repos\\RecapProject\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1087,11 +1069,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "C:\\Users\\AHC\\source\\repos\\RecapProject\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\AHC\\source\\repos\\RecapProject\\Core\\Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -1103,6 +1081,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.1.11, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
