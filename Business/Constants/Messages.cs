@@ -18,5 +18,12 @@ namespace Business.Constants
 
         public static string BrandAdded = "Brand is added";
         public static string BrandNameInvalid = "Brand Name is invalid!";
+
+        public static string UserAdded = "User is added";
+        public static string UserNameInvalid = "User Name is invalid!";
+
+
+        public static string RentalAdded = "Rental is added";
+        public static string RentalNotExists = "Rental in Use!";
     }
 }
