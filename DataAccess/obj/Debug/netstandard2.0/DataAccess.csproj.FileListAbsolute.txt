@@ -9,3 +9,5 @@ C:\Users\AHC\source\repos\RecapProject\DataAccess\obj\Debug\netstandard2.0\DataA
 C:\Users\AHC\source\repos\RecapProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.csproj.CopyComplete
 C:\Users\AHC\source\repos\RecapProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.dll
 C:\Users\AHC\source\repos\RecapProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.pdb
+C:\Users\AHC\source\repos\RecapProject\DataAccess\bin\Debug\netstandard2.0\Core.dll
+C:\Users\AHC\source\repos\RecapProject\DataAccess\bin\Debug\netstandard2.0\Core.pdb

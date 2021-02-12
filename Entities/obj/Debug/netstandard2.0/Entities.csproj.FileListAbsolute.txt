@@ -6,3 +6,6 @@ C:\Users\AHC\source\repos\RecapProject\Entities\obj\Debug\netstandard2.0\Entitie
 C:\Users\AHC\source\repos\RecapProject\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
 C:\Users\AHC\source\repos\RecapProject\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\Users\AHC\source\repos\RecapProject\Entities\obj\Debug\netstandard2.0\Entities.pdb
+C:\Users\AHC\source\repos\RecapProject\Entities\bin\Debug\netstandard2.0\Core.dll
+C:\Users\AHC\source\repos\RecapProject\Entities\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\AHC\source\repos\RecapProject\Entities\obj\Debug\netstandard2.0\Entities.csproj.CopyComplete

@@ -11,39 +11,45 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             CarManager carManager = new CarManager(new EfCarDal());
-            var result = carManager.GetAll();
-
+            var result = carManager.GetCarDetails();
 
             if(result.Success == true)
-            foreach (var car in result.Data)
-            {
-                Console.WriteLine("{0} - {1} - {2} ", car.Id, car.Description, car.ModelYear);
-            }
-            else
-            {
-                Console.WriteLine(result.Message);  
-            }
+                foreach(var car in result.Data)
+                {
+                    Console.WriteLine("{0} - {1} - {2} ", car.CarName, car.BrandName, car.ColorName);
+                }
 
-            Console.WriteLine("------------------------------");
-            result = carManager.GetCarsByBrandId(1);
+
+            //if(result.Success == true)
+            //foreach (var car in result.Data)
+            //{
+            //    Console.WriteLine("{0} - {1} - {2} ", car.Id, car.Description, car.ModelYear);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(result.Message);  
+            //}
+
+            //Console.WriteLine("------------------------------");
+            //result = carManager.GetCarsByBrandId(1);
             
-            if(result.Success == true)
-            foreach (var car in result.Data)
-            {
-                Console.WriteLine("{0} - {1} - {2} ", car.Id, car.Description, car.ModelYear);
-            }
-            else
-            {
-                Console.WriteLine(result.Message);
-            }
+            //if(result.Success == true)
+            //foreach (var car in result.Data)
+            //{
+            //    Console.WriteLine("{0} - {1} - {2} ", car.Id, car.Description, car.ModelYear);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(result.Message);
+            //}
 
-            Console.WriteLine("------------------------------");
-            result = carManager.GetCarsByColorId(1);
+            //Console.WriteLine("------------------------------");
+            //result = carManager.GetCarsByColorId(1);
       
-            foreach (var car in result.Data)
-            {
-                Console.WriteLine("{0} - {1} - {2} ", car.Id, car.Description, car.ModelYear);
-            }
+            //foreach (var car in result.Data)
+            //{
+            //    Console.WriteLine("{0} - {1} - {2} ", car.Id, car.Description, car.ModelYear);
+            //}
         }
     }
 }
