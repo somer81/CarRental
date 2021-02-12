@@ -13,21 +13,34 @@ namespace ConsoleUI
             CarManager carManager = new CarManager(new EfCarDal());
             var result = carManager.GetAll();
 
-            foreach (var car in result)
+
+            if(result.Success == true)
+            foreach (var car in result.Data)
             {
                 Console.WriteLine("{0} - {1} - {2} ", car.Id, car.Description, car.ModelYear);
+            }
+            else
+            {
+                Console.WriteLine(result.Message);  
             }
 
             Console.WriteLine("------------------------------");
             result = carManager.GetCarsByBrandId(1);
-            foreach (var car in result)
+            
+            if(result.Success == true)
+            foreach (var car in result.Data)
             {
                 Console.WriteLine("{0} - {1} - {2} ", car.Id, car.Description, car.ModelYear);
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
             }
 
             Console.WriteLine("------------------------------");
             result = carManager.GetCarsByColorId(1);
-            foreach (var car in result)
+      
+            foreach (var car in result.Data)
             {
                 Console.WriteLine("{0} - {1} - {2} ", car.Id, car.Description, car.ModelYear);
             }

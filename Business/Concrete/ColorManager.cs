@@ -1,46 +1,56 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Business.Concrete
 {
-    class ColorManager : IColorService
+    public class ColorManager : IColorService
     {
-        public void Add(Color color)
+
+        IColorDal _colorDal; 
+
+        public ColorManager(IColorDal colorDal)
         {
-            throw new NotImplementedException();
+            _colorDal = colorDal;  
+        }
+        
+        public IResult Add(Color color)
+        {
+            if(color.Name.Length < 2)
+            {
+                return new ErrorResult(Messages.CarNameInvalid); 
+            }
+            _colorDal.Add(color);
+            return new SuccessResult(Messages.ColorAdded); 
         }
 
-        public void Delete(Color color)
+        public IResult Delete(Color color)
         {
-            throw new NotImplementedException();
+            _colorDal.Delete(color);
+            return new ErrorResult(); 
         }
 
-        public List<Color> GetAll()
+        public IDataResult<List<Color>> GetAll()
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<Color>>(_colorDal.GetAll());
         }
 
-        public Color GetById(int id)
+        public IDataResult<Color> GetById(int id)
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<Color>(_colorDal.Get(c => c.Id == id)); 
         }
 
-        public List<Color> GetCarsByBrandId(int id)
-        {
-            throw new NotImplementedException();
-        }
 
-        public List<Color> GetCarsByColorId(int id)
+        public IResult Update(Color color)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Color color)
-        {
-            throw new NotImplementedException();
+            _colorDal.Update(color);
+            return new SuccessResult(); 
         }
     }
 }
