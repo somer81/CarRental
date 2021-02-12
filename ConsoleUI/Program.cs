@@ -11,14 +11,31 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            UserTest();
 
 
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+
+            rentalManager.Add(new Rental()
+            {
+                CarId = 1,
+                CustomerId = 1,
+                Id = 1,
+                RentalDate = DateTime.Now,
+                ReturnDate = null
+
+            });  ;
 
 
+            var result = rentalManager.GetById(1); 
 
+            if(result.Success == true)
+                Console.WriteLine("{0} {1}  {2}", result.Data.CarId,result.Data.RentalDate, result.Data.ReturnDate);
+            
+            
+            
+          //  UserTest();
 
-            TestCarDetailDto();
+          //  TestCarDetailDto();
 
 
             //if(result.Success == true)

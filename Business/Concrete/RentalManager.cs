@@ -40,10 +40,10 @@ namespace Business.Concrete
 
         public IDataResult<Rental> GetById(int id)
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<Rental>(_rentalDal.Get(r => r.Id == id), Messages.UserAdded);
         }
 
-      
+
 
         public IResult Update(Rental rental)
         {
