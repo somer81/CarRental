@@ -13,13 +13,14 @@ namespace DataAccess.Concrete.Entityframework
 {
     public class EfCarDal : EfEntityRepositoryBase<Car, CarsDbContext>, ICarDal
     {
+
         public void Add(Car entity)
         {
             using (CarsDbContext context = new CarsDbContext())
             {
                 var addEntity = context.Entry(entity);
                 addEntity.State = EntityState.Added;
-                context.SaveChanges(); 
+                context.SaveChanges();
             }
         }
 

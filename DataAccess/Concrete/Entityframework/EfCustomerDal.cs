@@ -10,7 +10,7 @@ using System.Text;
 
 namespace DataAccess.Concrete.Entityframework
 {
-    class EfCustomerDal:EfEntityRepositoryBase<Customer,CarsDbContext>,ICustomerDal
+    public class EfCustomerDal:EfEntityRepositoryBase<Customer,CarsDbContext>,ICustomerDal
     {
         public void Add(Customer entity)
         {

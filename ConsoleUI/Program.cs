@@ -13,29 +13,49 @@ namespace ConsoleUI
         {
 
 
-            RentalManager rentalManager = new RentalManager(new EfRentalDal());
-
-            rentalManager.Add(new Rental()
+            CarManager carManager = new CarManager(new EfCarDal());
+            try
             {
-                CarId = 1,
-                CustomerId = 1,
-                Id = 1,
-                RentalDate = DateTime.Now,
-                ReturnDate = null
+                var result = carManager.GetAll(); 
+                if (result.Success == true)
+                foreach (var car in result.Data)
+                {
+                    Console.WriteLine("{0} - {1} - {2} ", car.Id, car.ModelYear, car.DailyPrice);
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+           
 
-            });  ;
+           
 
 
-            var result = rentalManager.GetById(1); 
 
-            if(result.Success == true)
-                Console.WriteLine("{0} {1}  {2}", result.Data.CarId,result.Data.RentalDate, result.Data.ReturnDate);
-            
-            
-            
-          //  UserTest();
+            //RentalManager rentalManager = new RentalManager(new EfRentalDal());
 
-          //  TestCarDetailDto();
+            //rentalManager.Add(new Rental()
+            //{
+            //    CarId = 1,
+            //    CustomerId = 1,
+            //    Id = 1,
+            //    RentalDate = DateTime.Now,
+            //    ReturnDate = null
+
+            //});  ;
+
+
+            //var result = rentalManager.GetById(1); 
+
+            //if(result.Success == true)
+            //    Console.WriteLine("{0} {1}  {2}", result.Data.CarId,result.Data.RentalDate, result.Data.ReturnDate);
+
+
+
+            //  UserTest();
+
+            // TestCarDetailDto();
 
 
             //if(result.Success == true)
