@@ -105,7 +105,6 @@ C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.run
 C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.runtimeconfig.dev.json
 C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.dll
 C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.pdb
-C:\Users\AHC\source\repos\RecapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\AHC\source\repos\RecapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
 C:\Users\AHC\source\repos\RecapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
 C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
@@ -138,3 +137,8 @@ C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Business.p
 C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Core.pdb
 C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\DataAccess.pdb
 C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\AHC\source\repos\RecapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
