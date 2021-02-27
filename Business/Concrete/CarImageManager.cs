@@ -64,7 +64,8 @@ namespace Business.Concrete
         public IDataResult<List<CarImage>> GetAll()
         {
             var carImages = _carImageDal.GetAll();
-            return new SuccessDataResult<List<CarImage>>(carImages); 
+            return new SuccessDataResult<List<CarImage>>(carImages);
+
         }
 
         public IResult Update(CarImage carImage)
