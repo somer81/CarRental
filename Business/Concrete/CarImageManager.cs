@@ -16,7 +16,7 @@ using Business.ValidationRules.FluentValidation;
 
 namespace Business.Concrete
 {
-    public class CarImageManager : ICarImageService, IImageService<CarImage>
+    public class CarImageManager : ICarImageService
     {
 
         ICarImageDal _carImageDal;
@@ -45,15 +45,7 @@ namespace Business.Concrete
 
        
 
-        public IResult DeleteImage(int carImageId)
-        {
-            var image = _carImageDal.Get(c => c.Id == carImageId);
-            var path = image.ImagePath;
-
-            File.Delete(Directory.GetParent(Directory.GetCurrentDirectory()) + path);
-
-            return new SuccessResult(Messages.ImageFileDeleted);
-        }
+  
 
         public IDataResult<CarImage> GetById(int carImageId)
         {
@@ -73,16 +65,12 @@ namespace Business.Concrete
             DeleteImage(carImage.Id);
             SaveImage(carImage);
 
-            carImage.Date = DateTime.Now;
+            carImage.Date = DateTime.Now.ToString();
             _carImageDal.Update(carImage);
             return new SuccessResult(Messages.CarImageUpdated);
         }
 
-        public IResult SaveImage(CarImage carImage)
-        {
-            carImage.ImagePath = UploadPathFounder.CarImageSave(carImage.Image).Result.ToString();
-            return new SuccessResult(Messages.ImageSaved);
-        }
+      
 
         public IResult Delete(CarImage carImage)
         {
@@ -90,6 +78,23 @@ namespace Business.Concrete
 
             return new SuccessResult(Messages.CarImageDeleted);
         }
+
+
+        private static void SaveImage(CarImage carImage)
+        {
+            carImage.ImagePath = UploadPathFounder.CarImageSave(carImage.Image).Result.ToString();
+        }
+
+        private void DeleteImage(int carImageId)
+        {
+            var image = _carImageDal.Get(c => c.Id == carImageId);
+            var path = image.ImagePath;
+
+            File.Delete(Directory.GetParent(Directory.GetCurrentDirectory()) + path);
+        }
+
+
+
 
         private IResult CheckIfCarImageNumberExceeds(int carId)
         {
