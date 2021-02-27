@@ -143,3 +143,5 @@ C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Cor
 C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
 C:\Users\AHC\source\repos\RecapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\AHC\source\repos\RecapProject\WebAPI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll

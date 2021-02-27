@@ -13,45 +13,10 @@ namespace DataAccess.Concrete.Entityframework
 {
     public class EfCarDal : EfEntityRepositoryBase<Car, CarsDbContext>, ICarDal
     {
+       
+    
 
-        public void Add(Car entity)
-        {
-            using (CarsDbContext context = new CarsDbContext())
-            {
-                var addEntity = context.Entry(entity);
-                addEntity.State = EntityState.Added;
-                context.SaveChanges();
-            }
-        }
-
-        public void Delete(Car entity)
-        {
-            using (CarsDbContext context = new CarsDbContext())
-            {
-                var deletedEntity = context.Entry(entity);
-                deletedEntity.State = EntityState.Deleted;
-                context.SaveChanges();
-            }
-        }
-
-        public Car Get(Expression<Func<Car, bool>> filter)
-        {
-            using (CarsDbContext context = new CarsDbContext())
-            {
-                return context.Set<Car>().SingleOrDefault(filter);
-            }
-        }
-
-        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
-        {
-            using (CarsDbContext context = new CarsDbContext())
-            {
-                return filter == null ? context.Set<Car>().ToList() :
-                    context.Set<Car>().Where(filter).ToList(); 
-            }
-        }
-
-        public List<CarDetailsDto> GetCarDetails()
+    public List<CarDetailsDto> GetCarDetails()
         {
 
             using (CarsDbContext context = new CarsDbContext())
@@ -75,14 +40,6 @@ namespace DataAccess.Concrete.Entityframework
 
         }
 
-        public void Update(Car entity)
-        {
-            using (CarsDbContext context = new CarsDbContext())
-            {
-                var updatedEntity = context.Entry(entity);
-                updatedEntity.State = EntityState.Modified;
-                context.SaveChanges();
-            }
-        }
+       
     }
 }
